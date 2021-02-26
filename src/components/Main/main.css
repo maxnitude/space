@@ -1,0 +1,23 @@
+.main {
+	text-align: center;
+}
+
+.video-container {
+	max-width: 1230px;
+	margin: 0 auto;	
+}
+
+.video {
+	max-width: 100%;
+	max-height: 600px;
+}
+
+@media (max-width: 576px) {
+	.main {
+		padding-top: 50px;
+	}
+
+	.video-container {
+		display: none;	
+	}
+}

@@ -1,0 +1,98 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	background: #010001;
+	min-width: 320px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 1;
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+button, input {
+	font: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, p {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 25px;
+}
+
+
+.list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+}
+
+.item-link {
+	color: #ffffff;
+	text-decoration: none;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+.button {
+	color: #fff;
+	min-width: 200px;
+	padding: 20px;
+	text-align: center;
+	border: 2px solid #ffffff;
+	box-sizing: border-box;
+	border-radius: 6px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.title {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 75px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.title:after {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 60px;
+	background-color: #fff;
+	margin: 30px auto;
+}

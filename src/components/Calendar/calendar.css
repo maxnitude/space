@@ -1,0 +1,75 @@
+.calendar {
+	margin-top: 30px;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.calendar-list {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.calendar-item {
+	margin: 15px;
+}
+
+.button-more {
+	max-width: 200px;
+	display: block;
+	margin: 25px auto;
+}
+
+.launches {
+	width: 360px;
+	min-height: 470px;
+	border: 1px white solid;
+	border-radius: 30px;
+	background-color: #111111;
+	overflow: hidden;
+	padding: 30px;
+	text-align: left;
+}
+
+.launches-image {
+	position: relative;
+	height: 250px;
+	width: 250px;
+	margin: 0 auto;
+}
+
+.launches-content {
+	overflow: hidden;
+}
+
+
+.launches-image img {
+
+	object-fit: contain;
+	display: block;
+	margin: 0 auto;
+}
+
+.launches-title {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	text-align: center;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.launches-details {
+	display: block;
+}
+
+@media (max-width: 425px) {
+
+
+	.launches {
+		width: 310px;
+	}
+}
