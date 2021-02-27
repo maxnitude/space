@@ -17,8 +17,6 @@ const Details = (props) => {
    }, [getLaunch, props.match.params.id])
 
 	const history = useHistory();
-
-	console.log(launch);
 	
 	if (!launch) {
 		return <Preloader/>;

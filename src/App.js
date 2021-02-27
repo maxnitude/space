@@ -61,7 +61,6 @@ class App extends React.Component {
 				<Route path='/rocket/:rocket' render={
 					({match}) => {		
 						const {rocket} = match.params;
-						console.log(rocket);
 						return (
 							<>
 							<Main  rocketName={rocket}/>
