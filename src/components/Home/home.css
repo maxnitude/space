@@ -15,8 +15,6 @@
 	line-height: 2;
 }
 
-
-
 .row {
 	display: flex;
 	flex-direction: column;
@@ -25,8 +23,6 @@
 	align-items: center;
 	height: 800px;
 }
-
-
 
 .home_table {
 	border: 1px solid white;
@@ -58,8 +54,8 @@
 	text-align: left;
 }
 
-#video{
-	width: 600px;
+.responsive-video {
+	max-width: 600px;
 	order: 2;
 }
 
@@ -76,8 +72,8 @@
 }
 
 @media (max-width: 768px) {
-	#video{
-		width: 100%;
+	.responsive-video {
+		max-width: 350px;
 		order: 2;
 	}
 	.home_table {

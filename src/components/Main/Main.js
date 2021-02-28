@@ -26,7 +26,7 @@ const Main = ({rocketName, name}) => {
              <div className="video-container">
                 <video
                     className="video" 
-                    autoPlay loop muted 
+                    autoPlay loop muted playsInline 
                     src={`../video/${video.hasOwnProperty(rocket) ? video[rocket] : video.other}.mp4`}      
                 />
             </div>
