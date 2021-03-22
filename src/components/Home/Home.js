@@ -77,5 +77,4 @@ const Home = ({ company }) => {
 	);
 }
 
-
 export default Home;
