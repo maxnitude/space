@@ -8,14 +8,14 @@ const Home = ({ company }) => {
 	return (
 		<main className="main">
 			<div className="container">
-				<hgroup className="title">
+				<div className="home-title">
 					<h1>
 						<img className="logo-title" src={logo} alt={company.name}/>
 					</h1>
 					<h2 className="subtitle">
 						{company.summary}
 					</h2>
-				</hgroup>
+				</div>
 
 
 				<div className="row">

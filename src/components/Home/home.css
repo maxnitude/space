@@ -1,5 +1,5 @@
 
-.title {
+.home-title {
 	margin-bottom: 50px;
 }
 
@@ -21,13 +21,13 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	height: 800px;
+	height: 600px;
 }
 
 .home_table {
 	border: 1px solid white;
 	border-collapse: collapse;
-	margin: 30px;
+	margin: 0 30px 30px;
 	order: 1;
 }
 
