@@ -28,7 +28,7 @@ const Calendar = () => {
     return(
         <>
             <section className="calendar">
-                <h1 className='title'>Календарь SpaceX</h1>
+                <h1 className='title'>Calendar SpaceX</h1>
                     <div className="container">
                         <ul className="calendar-list">
                             {renderCard.map(item => (

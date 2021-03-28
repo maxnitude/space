@@ -35,8 +35,8 @@
 
 .launches-image {
 	position: relative;
-	height: 250px;
-	width: 250px;
+	max-height: 250px;
+	max-width: 250px;
 	margin: 0 auto;
 }
 
@@ -47,7 +47,7 @@
 
 .launches-image img {
 
-	object-fit: contain;
+	object-fit: cover;
 	display: block;
 	margin: 0 auto;
 }
@@ -66,10 +66,17 @@
 	display: block;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 576px) {
 
 
 	.launches {
-		width: 310px;
+		width: 250px;
+		max-height: 400px;
+		min-height: 200px;
+	}
+
+	.launches-title {
+		margin-top: 15px;
+		margin-bottom: 15px;
 	}
 }

@@ -9,6 +9,13 @@ const video = {
 	other: 'space',
 }
 
+const rocketImages = {
+	'Falcon 1': 'falcon-1',
+	'Falcon 9': 'falcon-9',
+	'Falcon Heavy': 'falcon-heavy',
+	'Starship': 'starship',
+};
+
 const title = {
 	'falcon_1': 'Falcon 1',
 	'falcon_9': 'Falcon 9',
@@ -16,22 +23,40 @@ const title = {
 	'starship': 'Starship',
 }
 
-const Main = ({rocketName, name}) => {
+const Main = ({rocketName}) => {
+
 
     const rocket = title.hasOwnProperty(rocketName) ? title[rocketName] : null;
+
+    let width = window.innerWidth;
     
-    return (
-        <section className="main">
-            <h1 className="title">{name || rocket }</h1>
-             <div className="video-container">
-                <video
-                    className="video" 
-                    autoPlay loop muted playsInline 
-                    src={`../video/${video.hasOwnProperty(rocket) ? video[rocket] : video.other}.mp4`}      
-                />
-            </div>
-        </section>
-    );
+    if (width > 576) {
+        return (
+            <section className="main">
+                <h1 className="title">{rocket}</h1>
+                <div className="video-container">
+                    <video
+                        className="video" 
+                        autoPlay loop muted playsInline 
+                        src={`../video/${video.hasOwnProperty(rocket) ? video[rocket] : video.other}.mp4`}      
+                    />
+                </div>
+            </section>
+        );
+    } else {
+        return (
+            <section className="main">
+                <h1 className="title">{rocket }</h1>
+                <div className="video-container">
+                <img
+					src={`../img/${rocketImages[rocket]}.png`}
+					alt="rocket"
+					className="rocket-img"
+			/>
+                </div>
+            </section>
+        );
+    }
 }
 
 export default Main;
