@@ -102,8 +102,12 @@ h1, h2, h3, p {
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
-		line-height: 75px;
+		line-height: 50px;
 		margin-bottom: 0;
 		margin-top: 0;
+	}
+
+	.title:after {
+		display: none;
 	}
 }

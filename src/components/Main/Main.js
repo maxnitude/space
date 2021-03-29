@@ -25,12 +25,8 @@ const title = {
 
 const Main = ({rocketName}) => {
 
-
     const rocket = title.hasOwnProperty(rocketName) ? title[rocketName] : null;
 
-    let width = window.innerWidth;
-    
-    if (width > 576) {
         return (
             <section className="main">
                 <h1 className="title">{rocket}</h1>
@@ -41,22 +37,16 @@ const Main = ({rocketName}) => {
                         src={`../video/${video.hasOwnProperty(rocket) ? video[rocket] : video.other}.mp4`}      
                     />
                 </div>
-            </section>
-        );
-    } else {
-        return (
-            <section className="main">
-                <h1 className="title">{rocket }</h1>
-                <div className="video-container">
-                <img
-					src={`../img/${rocketImages[rocket]}.png`}
-					alt="rocket"
-					className="rocket-img"
-			/>
+                <div className="image-container">
+                    <img
+                        src={`../img/${rocketImages[rocket]}.png`}
+                        alt="rocket"
+                        className="rocket-img"
+                    />
                 </div>
             </section>
         );
-    }
+    
 }
 
 export default Main;
