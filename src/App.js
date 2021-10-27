@@ -11,42 +11,39 @@ import FetchData from  './service/FetchData';
 
 
 class App extends React.Component {
-	
-	fetchData = new FetchData()
-	
-	state = {
-		rocket: 'Falcon 1',
-		rocketFeatures: null,
-		rockets: [],
-		companyData: null
+	constructor(props) {
+		super(props);
+		this.state = {
+			rocketFeatures: null,
+			rockets: [],
+			companyData: null
+		};
+		this.fetchData = new FetchData()
 	}
 
+	
 	componentDidMount() {
 		this.updateRocket();
 		this.updateCompany();
 	}
 	
-	updateRocket() {
+	updateRocket(rocket = 'Falcon 1') {
 		this.fetchData.getRocket()
 			.then(data => {
-				this.setState({rockets: data.map(item => item.name)});
-				return data;
+				this.setState({
+					rockets: data.map(item => item.name),
+					rocketFeatures: data.find(item => item.name === rocket)
+				});
 			})
-			.then(data => data.find(item => item.name === this.state.rocket))
-			.then(rocketFeatures => {
-				this.setState({rocketFeatures});
-			});
 	}
 
-	changeRocket = rocket => {
-		this.setState({
-			rocket
-		}, this.updateRocket);
+	changeRocket = (rocket) => {
+		this.updateRocket(rocket);
 	}
 
 	updateCompany = () => {
 		this.fetchData.getCompany()
-		.then(companyData => this.setState({companyData}))
+			.then(companyData => this.setState({companyData}))
 	}
 	  
 	render() {
